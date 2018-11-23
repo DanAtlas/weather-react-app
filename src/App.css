@@ -1,32 +1,212 @@
-.App {
+@import url("https://fonts.googleapis.com/css?family=Merriweather:100,200,300,300i,400,400i,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
+::-moz-selection {
+  color: #fff;
+  background: #52a5ea;
+}
+
+::selection {
+  color: #fff;
+  background: #52a5ea;
+}
+
+.wrapper {
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#9ef1ba), color-stop(#89f3bb), color-stop(#99ebfa), to(#69c7ec));
+  background-image: linear-gradient(to top, #9ef1ba, #89f3bb, #99ebfa, #69c7ec);
+  margin: 0 auto;
+}
+
+.container {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  height: 90vh;
+  width: 80%;
+  background: #2c3e50;
+  -webkit-box-shadow: 0px 13px 40px -13px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 13px 40px -13px rgba(0, 0, 0, 0.75);
+  margin: 0 auto;
+}
+
+.left-block {
+  position: relative;
+  float: left;
+  width: 40%;
+  height: 100%;
+  background: url("img/mountain.jpg") center center no-repeat;
+  background-size: cover;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.left-block .info {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  color: #fff;
+  margin: auto;
+  padding: 0 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.left-block .info h1 {
+  font-size: 36px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  line-height: 1.3;
+  font-family: 'Roboto Slab', serif;
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.left-block .info p {
+  font-style: italic;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.left-block .author {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+.left-block .author a:hover {
+  color: #c5c5c5;
+}
+
+.left-block .author .btn-auth {
+  text-decoration: none;
+  color: #fff;
+}
+
+.left-block .git-auth {
+  display: block;
+  margin-top: 10px;
+}
+
+.left-block .git-auth a {
+  color: #fff;
+}
+
+.right-block {
+  float: right;
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+.right-block .form-container {
+  padding: 0 40px;
+  padding-top: 70px;
+  padding-bottom: 10px;
+  margin: 0 auto;
+}
+
+.right-block .form-container input:-webkit-autofill,
+.right-block .form-container input:-webkit-autofill:hover,
+.right-block .form-container input:-webkit-autofill:focus,
+.right-block .form-container input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #2c3e50 inset;
+  -webkit-text-fill-color: #fff !important;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.right-block .form-container input[type="text"] {
+  background-color: transparent;
+  border: 0;
+  border-bottom: solid 1px #52b2ea;
+  width: 100%;
+  max-width: 280px;
+  padding-bottom: 4px;
+  color: #fff !important;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  font-size: 20px;
+  outline: none;
+}
+
+.right-block .form-container .btn {
+  border: 0;
+  padding: 8px 20px;
+  border-radius: 2px;
+  letter-spacing: 1px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #52b2ea;
+  color: #fff;
+  outline: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.right-block .form-container .btn:active {
+  background-color: #4d9ece;
+}
+
+.right-block .weather-container {
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+.right-block .weather-container .weather-key {
+  color: #52b2ea;
+  border-bottom: solid 2px rgba(255, 255, 255, 0.06);
+  padding: 10px 0 10px 0;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+.right-block .weather-container .weather-key:last-child {
+  border: 0;
+}
+
+.right-block .weather-container .weather-value {
+  color: #fff;
+  font-weight: 200;
+}
+
+.right-block .weather-container .error-note {
+  color: #fff;
+  font-size: 17px;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    min-height: 940px;
   }
-  to {
-    transform: rotate(360deg);
+  .container {
+    height: 90%;
+  }
+  .left-block {
+    width: 100%;
+    height: 48%;
+  }
+  .right-block {
+    width: 100%;
+    height: 52%;
   }
 }
+
+@media (max-height: 750px) and (max-width: 768px) {
+  .container {
+    min-height: 850px;
+    margin-top: 140px;
+  }
+}
+/*# sourceMappingURL=App.css.map */
